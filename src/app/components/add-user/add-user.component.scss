@@ -1,0 +1,44 @@
+// Style input and required message
+mat-form-field {
+  padding: 10px;
+  input{
+    padding-top: 15px;
+  }
+  mat-error{
+    color: red;
+  }
+}
+
+// Adjust the color of the slide toggle
+.mat-slide-toggle {
+  &.mat-checked {
+    .mat-slide-toggle-bar {
+      background-color: #2196f3; // Change to your desired color
+    }
+  }
+}
+
+// Style the submit button
+button[type="submit"] {
+  margin-top: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightblue;
+  height: 45px;
+  width: 100px;
+}
+
+// Style dialog title and close button
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button{
+    background: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 15px;
+  }
+}
+

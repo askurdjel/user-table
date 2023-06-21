@@ -1,0 +1,41 @@
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  .table{
+    border: 1px solid lightblue;
+    th{
+      width: 20vw;
+      background-color: lightblue;
+    }
+    td{
+      width: 20vw;
+      text-align: center;
+    }
+  }
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+  .add-button{
+    margin-top: 15px;
+    text-align: center;
+    cursor: pointer;
+    background-color: lightblue;
+    height: 45px;
+    width: 150px;
+  }
+  .add-button:disabled{
+    cursor: auto;
+  }
+}
+
+
+::ng-deep{
+  .cdk-overlay-container{
+    max-width: 80vw;
+    position: fixed !important;
+    left: 40%;
+  }
+}
+

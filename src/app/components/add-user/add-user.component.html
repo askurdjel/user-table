@@ -1,0 +1,18 @@
+<div mat-dialog-title class="dialog-title">
+  <h2>Add new User</h2>
+  <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+    <mat-icon>x</mat-icon>
+  </button>
+</div>
+<mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="addUser()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name" required />
+      <mat-error *ngIf="form.invalid">Name required for User</mat-error>
+    </mat-form-field>
+    <mat-slide-toggle formControlName="active">Active</mat-slide-toggle>
+
+    <button mat-raised-button color="primary" type="submit">Add User</button>
+  </form>
+</mat-dialog-content>

@@ -1,0 +1,37 @@
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users$ | async">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>
+          <mat-slide-toggle
+            [(ngModel)]="user.active"
+            name="active"
+            (change)="editUser(user, $event)"
+            >Active</mat-slide-toggle
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-container *ngIf="activeUsers$ | async as activeUsers">
+  <div class="button-wrapper">
+    <button
+      class="add-button"
+      mat-button
+      [disabled]="!canAddUser || activeUsers.length > 4"
+      (click)="addUser()"
+    >
+      Add User
+    </button>
+  </div>
+</ng-container>
